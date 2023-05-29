@@ -29,10 +29,11 @@ def check_gas_testing_time_compliance() -> bool:
 
     compliant = 0
     loop_v = 0
+    res=False
     k_time = entry_time - dt.timedelta(minutes=-30)
 
     if exit_time <= k_time:
-        print('Compliant')
+        res=True
 
     else:
         while k_time < exit_time:
